@@ -1,0 +1,13 @@
+source_x = ColumnDataSource(pd_Drake)
+
+art_selecta = RadioButtonGroup(
+labels = ["Drake", "Taylor Swift", "Adele", "One Direction", "Beyonce", "Bruno Mars"])
+
+def update(attr, old, new):
+	artist = art_selecta.value
+	print("{} was selected".format(artist))
+	
+
+show(vform(art_selecta, plot))
+
+
